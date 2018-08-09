@@ -1,29 +1,31 @@
 <template>
 	<div class="about-container">
+		<link rel="stylesheet" href="/src/assets/fonts/css/fontello.css">
 		<div class="intro-text">With us you can</div>
 		<div class="info-container">
 			<div class="row col-8">
 
 				<div class="col-1 col-s-5 column">
-					<button></button>
+					
+					<button onclick="location.href='http://www.example.com'" class="btn-study"><i class="icon-plus"></i></button>
 					<p>
 						Improve your code by<br>
 						getting reviews.
 					</p>
 				</div>
 				<div class="col-1 col-s-5 column">
-					<button></button>
+					<button class="btn-help"><i class="icon-thumbs-up"></i></button>
 					<p>
 						Help someone by<br>
 						reviewing his code
 					</p>
 				</div>
 				<div class="col-1 col-s-5 column">
-					<button></button>
+					<button onclick="location.href='http://www.example.com'" class="btn-work"><i class="icon-users"></i></button>
 					<p>Work with us</p>
 				</div>
 				<div class="col-1 col-s-5 column">
-					<button></button>
+					<button class="btn-search"><i class="icon-search"></i></button>
 					<p>
 						Search for something<br>
 						specific
@@ -45,6 +47,15 @@ export default {}
 
 $grey:  #151515;
 $lightGrey: #919191;
+$leading: rgb(0, 139, 219);
+
+//icons
+[class*="icon-"] {
+	font-size: 90px;
+	padding-left: 20px;
+	visibility: hidden;
+	color: $leading;
+}
 
 //main
 .about-container{
@@ -54,7 +65,7 @@ $lightGrey: #919191;
 	margin-top: 10em;
 }
 .info-container{
-	padding-top:150px;
+	padding-top: 150px;
 }
 .intro-text{
 	color: $grey;
@@ -68,14 +79,47 @@ $lightGrey: #919191;
 	display: table;
 	text-align: center;
 }
+
 button{
 	border-radius: 200px;
 	border: none;
 	text-decoration: none;
-	background-color: $lightGrey;
 	cursor: pointer;
 	display: block;
 	margin: 0 auto;
+	outline: none;
+
+	&:hover{
+		animation-name: CircleHover;
+		animation-duration: 2s;
+
+		[class*="icon-"] {
+			visibility: visible;
+			animation: IconFadeIn;
+			animation-duration: 1s;
+		}
+	}
+}
+.btn-study{background: url('../assets/images/study_circle.jpg') no-repeat;background-size: cover;}
+.btn-help{background: url('../assets/images/help_circle.jpg') no-repeat;background-size: cover;background-position: -70px;}
+.btn-work{background: url('../assets/images/work_circle.jpg') no-repeat;background-size: cover;background-position-x: -30px;}
+.btn-search{background: url('../assets/images/search_circle.jpg') no-repeat;background-size: cover;background-position-x: -10px;}
+
+//animations
+@keyframes CircleHover {
+	//from {filter: blur(0)}
+	//to	 {filter: bluer(0.1rem)}
+	//from {filter: blur(0.1rem)}
+	//to	 {filter: bluer(0)}
+
+	0%	{border-top-right-radius: 100px;}
+	25%	{border-bottom-right-radius: 100px;}
+	50%	{border-bottom-left-radius: 100px;}
+	75%	{border-top-left-radius: 100px;}
+}
+@keyframes IconFadeIn {
+	from {opacity: 0;}
+    to   {opacity: 1;}
 }
 
 //smartphones

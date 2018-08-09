@@ -17,9 +17,12 @@
 
 @import url('https://fonts.googleapis.com/css?family=Monoton');
 
+$leading: rgb(0, 139, 219);
+
 //main
 .logo{
   font-family: 'Monoton', cursive;
+  color: $leading;
 }
 
 ul{
