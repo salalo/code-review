@@ -28,6 +28,7 @@
     padding: 0;
     margin: 0 !important;
     font-family: 'Roboto', sans-serif;
+    font-weight: 300;
   }
 
 </style>
