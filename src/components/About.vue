@@ -10,7 +10,7 @@
 					<button onclick="location.href='http://www.example.com'" class="btn-study"><i class="icon-plus"></i></button>
 					<p>
 						Improve your code by<br>
-						getting reviews.
+						getting reviews
 					</p>
 				</div>
 				<div class="col-1 col-s-5 column">
@@ -40,7 +40,7 @@
 export default {}
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display&subset=latin-ext');
 
@@ -49,7 +49,7 @@ $lightGrey: #d4d4d4;
 $leading: rgb(0, 139, 219);
 
 //icons
-[class*="icon-"] {
+[class*="icon-"]{
 	font-size: 90px;
 	padding-left: 20px;
 	visibility: hidden;
