@@ -24,7 +24,7 @@
 @import "./stylesheets/flexbox.scss";
 
   body{
-    background-color:#f5f5f5;
+    background-color: #1e1e1e;
     padding: 0;
     margin: 0 !important;
     font-family: 'Roboto', sans-serif;
