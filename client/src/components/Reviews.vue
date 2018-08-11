@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="reviews-container">
 	</div>
 </template>
 

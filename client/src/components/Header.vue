@@ -2,7 +2,7 @@
   <div class="header-container">
     <div class="logo">CODE-REVIEW</div>
 
-    <i class="icon-list">
+    <i class="icon-list">*
       <ul class="dropdown-content">
         <li>Log In</li>
         <li>Sign Up</li>

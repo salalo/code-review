@@ -1,13 +1,13 @@
 <template>
   <div>
-    <app-header></app-header>
-    <app-about></app-about>
-    <app-reviews></app-reviews>
+    <app-header/>
+    <app-about/>
+    <app-reviews/>
   </div>
 </template>
 
 <script>
-  //    <router-view/>
+  //<router-view/>
   
   import Header from './components/Header.vue'
   import About from './components/About.vue'
@@ -22,7 +22,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style slang="scss">
 
 @import "./stylesheets/flexbox.scss";
 
