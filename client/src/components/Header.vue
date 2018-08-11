@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="header-container">
     <div class="logo">CODE-REVIEW</div>
 
     <i class="icon-list">
@@ -235,12 +235,12 @@ a{
       padding: 0;
       display: none;
       position: absolute;
-      right: 1em;
+      right: 0em;
       margin-top: -.7em;
       list-style: none;
       font-size: 20px;
       background-color: $darkGrey;
-      border-radius: 20px;
+      width: 100%;
 
       li{
         //border-top: $leading solid 1px;
