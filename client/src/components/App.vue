@@ -8,9 +8,9 @@
 
 <script>
   //<router-view/>
-  import Header from './components/Header.vue'
-  import About from './components/About.vue'
-  import Reviews from './components/Reviews.vue'
+  import Header from './app/Header.vue'
+  import About from './app/About.vue'
+  import Reviews from './app/Reviews.vue'
 
 export default {
     components:{
@@ -22,7 +22,7 @@ export default {
 </script>
 <style slang="scss">
 
-@import "./stylesheets/flexbox.scss";
+@import "../stylesheets/flexbox.scss";
 
   body{
     background-color: #1e1e1e;

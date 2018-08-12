@@ -100,9 +100,9 @@ button{
 		}
 	}
 }
-.btn-study{background: url('../assets/images/study_circle.jpg') no-repeat;background-size: cover;}
-.btn-help{background: url('../assets/images/help_circle.jpg') no-repeat;background-size: cover;background-position: -70px;}
-.btn-search{background: url('../assets/images/search_circle.jpg') no-repeat;background-size: cover;background-position-x: -10px;}
+.btn-study{background: url('../../assets/images/study_circle.jpg') no-repeat;background-size: cover;}
+.btn-help{background: url('../../assets/images/help_circle.jpg') no-repeat;background-size: cover;background-position: -70px;}
+.btn-search{background: url('../../assets/images/search_circle.jpg') no-repeat;background-size: cover;background-position-x: -10px;}
 
 //animations
 @keyframes CircleHover {

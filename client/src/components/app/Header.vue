@@ -28,13 +28,9 @@
 <script>
 export default {}
 import Vue from 'vue'
+import Icon from 'element-ui'
 
-import {
-	Icon
-
-} from 'element-ui'
-
-Vue.component(Icon.name, Icon)
+Vue.use(Icon)
 </script>
 
 <style scoped lang="scss">
@@ -95,6 +91,7 @@ a{
 	right: 0em;
 	background-color: $darkGrey;
 	margin-top: -.1em;
+	font-family: 'Roboto', sans-serif;
 
 	li{ padding: 10px 20px 10px 20px; }
 }
@@ -124,7 +121,6 @@ a{
 			}
 		}
 	}
-
 }
 //smartphones
 @media only screen and (max-width: 321px){
