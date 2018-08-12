@@ -7,16 +7,15 @@
 </template>
 
 <script>
-  //<router-view/>
-  import Header from './app/Header.vue'
-  import About from './app/About.vue'
-  import Reviews from './app/Reviews.vue'
+ 	 import Header from './app/Header.vue'
+ 	 import About from './app/About.vue'
+ 	 import Reviews from './app/Reviews.vue'
 
 export default {
     components:{
-      'app-header': Header,
-      'app-about': About,
-      'app-reviews': Reviews,
+      	'app-header': Header,
+      	'app-about': About,
+     	'app-reviews': Reviews
     },
 }
 </script>
@@ -24,11 +23,11 @@ export default {
 
 @import "../stylesheets/flexbox.scss";
 
-  body{
-    background-color: #1e1e1e;
-    padding: 0;
-    margin: 0 !important;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
-  }
+	body{
+		background-color: #1e1e1e;
+		padding: 0;
+		margin: 0 !important;
+		font-family: 'Roboto', sans-serif;
+		font-weight: 300;
+	}
 </style>
