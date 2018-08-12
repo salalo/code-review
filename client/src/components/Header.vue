@@ -2,7 +2,7 @@
   <div class="header-container">
     <div class="logo">CODE-REVIEW</div>
 
-    <i class="icon-list">*
+    <i class="el-icon-more">sd
       <ul class="dropdown-content">
         <li>Log In</li>
         <li>Sign Up</li>
@@ -26,7 +26,15 @@
 </template>
 
 <script>
-  export default {}
+export default {}
+import Vue from 'vue'
+
+import {
+  Icon
+
+} from 'element-ui'
+
+Vue.component(Icon.name, Icon)
 </script>
 
 <style scoped lang="scss">

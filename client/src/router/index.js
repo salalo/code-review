@@ -11,6 +11,5 @@ export default new Router({
 			name: 'App',
 			component: App
 		}
-
 	]
 })

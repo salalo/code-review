@@ -7,28 +7,28 @@
 
 				<div class="col-1 col-s-5 column">
 					
-					<button onclick="location.href='http://www.example.com'" class="btn-study"><i class="icon-plus"></i></button>
+					<button onclick="location.href='http://www.example.com'" class="btn-study"><i class="el-icon-plus"></i></button>
 					<p>
 						Improve your code by<br>
 						getting reviews
 					</p>
 				</div>
 				<div class="col-1 col-s-5 column">
-					<button class="btn-help"><i class="icon-thumbs-up"></i></button>
+					<button class="btn-help"><i class="el-icon-star-off"></i></button>
 					<p>
 						Help someone by<br>
 						reviewing his code
 					</p>
 				</div>
 				<div class="col-1 col-s-5 column">
-					<button class="btn-search"><i class="icon-search"></i></button>
+					<button class="btn-search"><i class="el-icon-search"></i></button>
 					<p>
 						Search for something<br>
 						specific
 					</p>
 				</div>
 				<div class="col-1 col-s-5 column">
-					<button onclick="location.href='http://www.example.com'" class="btn-work"><i class="icon-users"></i></button>
+					<button onclick="location.href='http://www.example.com'" class="btn-work"><i class="el-icon-loading"></i></button>
 					<p>Placeholder</p>
 				</div>	
 			</div>
@@ -49,10 +49,10 @@ $lightGrey: #d4d4d4;
 $leading: rgb(0, 139, 219);
 
 //icons
-[class*="icon-"]{
+[class*="-icon-"]{
 	font-size: 90px;
-	padding-left: 20px;
 	visibility: hidden;
+	font-weight: 1000;
 	color: $leading;
 }
 
@@ -64,7 +64,7 @@ $leading: rgb(0, 139, 219);
 	margin-top: 10em;
 }
 .info-container{
-	padding-top: 150px;
+	padding-top: 200px;
 }
 .intro-text{
 	color: $lightGrey;

@@ -8,7 +8,6 @@
 
 <script>
   //<router-view/>
-  
   import Header from './components/Header.vue'
   import About from './components/About.vue'
   import Reviews from './components/Reviews.vue'
@@ -21,7 +20,6 @@ export default {
     },
 }
 </script>
-
 <style slang="scss">
 
 @import "./stylesheets/flexbox.scss";
