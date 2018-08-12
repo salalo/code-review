@@ -7,7 +7,7 @@
 
 				<div class="col-1 col-s-5 column">
 					
-					<button onclick="location.href='/reviews/add'" class="btn-study"><i class="el-icon-plus"></i></button>
+					<router-link to="/review/add"><button class="btn-study"><i class="el-icon-plus"></i></button></router-link>
 					<p>
 						Improve your code by<br>
 						getting reviews
