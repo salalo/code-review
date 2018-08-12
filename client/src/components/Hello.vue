@@ -15,7 +15,7 @@ export default {
 	name: 'app',
     components:{
     	'app-header': Header,
-      	'app-about': About,
+      'app-about': About,
      	'app-reviews': Reviews
     },
 }

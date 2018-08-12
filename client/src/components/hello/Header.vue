@@ -19,7 +19,7 @@
 	</div>
 
 	<div class="nav-container__right">
-		<a href="">Log In</a>
+		<router-link to="/login"><a>Log In</a></router-link>
 	  	<a href="">Sign Up</a>
 	</div>
   	</div>
@@ -48,6 +48,9 @@ $darkGrey: rgb(17, 17, 17);
 }
 
 //main
+.header-container{
+	box-shadow: 0px 5px 5px $darkGrey;
+}
 .logo{
 	font-family: 'Monoton', cursive;
 	color: $leading;
@@ -158,6 +161,9 @@ a{
 		font-size: 40px;
 		margin: -1.2em 0.3em 0 0;
   	}
+	.nav-container__left{
+		a{ margin: 0; }
+	}
 }
 
 //pc
@@ -169,5 +175,6 @@ a{
 	
 	a{ visibility: visible; }
 	.icon-list{ display: none; }
+	.header-container{ 	padding-bottom: 20px; }
 }
 </style>

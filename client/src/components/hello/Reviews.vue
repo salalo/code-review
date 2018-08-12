@@ -17,5 +17,5 @@ Vue.component(Button.name, Button)
 
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 </style>
