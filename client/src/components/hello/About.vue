@@ -7,28 +7,28 @@
 
 				<div class="col-1 col-s-5 column">
 					
-					<router-link to="/review/add"><button class="btn-study"><i class="el-icon-plus"></i></button></router-link>
+					<router-link to="/review/add"><button class="btn-study"><i class="material-icons">add</i></button></router-link>
 					<p>
 						Improve your code by<br>
 						getting reviews
 					</p>
 				</div>
 				<div class="col-1 col-s-5 column">
-					<button class="btn-help"><i class="el-icon-star-off"></i></button>
+					<button class="btn-help"><i class="material-icons">fingerprint</i></button>
 					<p>
 						Help someone by<br>
 						reviewing his code
 					</p>
 				</div>
 				<div class="col-1 col-s-5 column">
-					<button class="btn-search"><i class="el-icon-search"></i></button>
+					<button class="btn-search"><i class="material-icons">search</i></button>
 					<p>
 						Search for something<br>
 						specific
 					</p>
 				</div>
 				<div class="col-1 col-s-5 column">
-					<button onclick="location.href='http://www.example.com'" class="btn-work"><i class="el-icon-loading"></i></button>
+					<button class="btn-work"><i class="material-icons">settings</i></button>
 					<p>Placeholder</p>
 				</div>	
 			</div>
@@ -49,8 +49,8 @@ $lightGrey: #d4d4d4;
 $leading: rgb(0, 139, 219);
 
 //icons
-[class*="-icon-"]{
-	font-size: 90px;
+[class*="-icons"]{
+	font-size: 100px;
 	visibility: hidden;
 	font-weight: 1000;
 	color: $leading;
@@ -93,7 +93,7 @@ button{
 		animation-name: CircleHover;
 		animation-duration: 2s;
 
-		[class*="icon-"] {
+		[class*="-icons"] {
 			visibility: visible;
 			animation: IconFadeIn;
 			animation-duration: 1s;

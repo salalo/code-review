@@ -11,8 +11,8 @@
     "start": "npm run dev"
   },
   "dependencies": {
+    "@material/textfield": "^0.38.0",
     "axios": "^0.18.0",
-    "element-ui": "^2.4.6",
     "nodemon": "^1.18.3",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"

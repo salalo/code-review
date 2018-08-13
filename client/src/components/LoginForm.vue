@@ -1,11 +1,11 @@
 <template>
-  	<div>
+  	<div class="login-grid">
 		<app-header/>
-		<div class="login-container col-5">
+		<div class="login-container">
 			<form class="login-form">
-				<el-input class="email-input__element col-8" type="email" placeholder="Email"></el-input>
-				<el-input class="password-input__element col-8" type="password" placeholder="Password"></el-input>
-				<el-button class="login-btn__element col-8" type="primary">Login</el-button>
+				<input class="wrap-input" name="email" type="text">
+				<input class="wrap-input" name="passwd" type="password">
+				<button class="login-btn" type="submit">LOGIN</button>
 			</form>
 		</div>
   	</div>
@@ -27,20 +27,11 @@ $leading: rgb(0, 139, 219);
 $lightGrey: #d4d4d4;
 $darkGrey: rgb(17, 17, 17);
 
-.login-container{
-	margin: 0 auto;
-	background-color: $darkGrey;
-	border-radius: 10px;
-	padding-bottom: 20px;
-	box-shadow: 0px 0px 80px 20px black;
-}
-.login-btn__element{
-	margin: 0 auto;
-	display: table-cell; 
-}
-[class*="__element"]{
-	margin-top: 20px;
-}
+.login-grid{ display: grid;}
+.login-container { 
+	display: inline-grid;
+	background-color: $lightGrey;
 
+}
 
 </style>

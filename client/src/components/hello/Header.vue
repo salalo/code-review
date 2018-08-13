@@ -1,8 +1,8 @@
 <template>
 	<div class="header-container">
 	<div class="logo">CODE-REVIEW</div>
-
-	<i class="el-icon-more icon-list">
+	
+	<i class="material-icons icon-list">dehaze
 		<ul class="dropdown-content">
 			<li>Log In</li>
 			<li>Sign Up</li>
@@ -28,9 +28,9 @@
 <script>
 export default {}
 import Vue from 'vue'
-import Icon from 'element-ui'
+// import Icon from 'element-ui'
 
-Vue.use(Icon)
+// Vue.use(Icon)
 </script>
 
 <style scoped lang="scss">
