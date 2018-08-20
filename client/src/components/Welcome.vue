@@ -14,7 +14,7 @@
         </header>
         <div class="info">
             <div class="info__text">
-                <h2>With us you can</h2>
+                <h1>With us you can</h1>
             </div>
         </div>
     </div>
@@ -27,15 +27,19 @@ export default {}
 <style scoped lang="scss">
 
 $white: #fafafa;
-$main: rgb(255,152,0);
+$yellow: rgb(255,152,0);
 $grey: rgb(66,66,66);
+$darkGrey: #202124;
 $blue: rgb(68,138,255);
 
 .info{
-    background-color: $grey;
+    background-color: $darkGrey;
     color: $white;
     height: 700px;
-    font-size: 50px;
+}
+.info__text{
+    padding-top: 100px;
+    text-align: center;
 }
 
 </style>
