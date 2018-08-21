@@ -1,12 +1,12 @@
 <template>
-    <div id="app">
-        <router-view/>
-    </div>
+	<div id="app">
+		<router-view/>
+	</div>
 </template>
 
 <script>
 export default {
-    name: 'App'
+	name: 'App'
 }
 </script>
 
@@ -19,9 +19,9 @@ $blue: rgb(68,138,255);
 
 body{
 	font-family: 'Roboto', sans-serif;
-    background-color: $white;
-    padding: 0 !important;
-    margin: 0 !important;
+	background-color: $white;
+	padding: 0 !important;
+	margin: 0 !important;
 }
 
 </style>
