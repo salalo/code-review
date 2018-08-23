@@ -70,7 +70,7 @@ $blue: rgb(68,138,255);
 .info{
 	background-color: $darkGrey;
 	color: $white;
-	height: 700px;
+	padding-bottom: 150px;
 }
 .info__text{
 	padding: 100px 0 50px 0;
@@ -96,7 +96,6 @@ $blue: rgb(68,138,255);
 	font-size: 20px;
 	display: table-cell;
     vertical-align: middle;
-
 }
 .box-container{
 	padding-top: 30px;
@@ -117,6 +116,7 @@ $blue: rgb(68,138,255);
 		.overlay{ opacity: .8; }
 	}
 }
+.mdl-layout__header-row{ padding-left: 40px; }
 .study{background: url('../assets/images/study.jpg') no-repeat; background-size: cover;}
 .help{background: url('../assets/images/help.jpg') no-repeat; background-size: cover; background-position: -100px;}
 
@@ -129,21 +129,35 @@ $blue: rgb(68,138,255);
 }
 
 
-
 // SMARTPHONES
-@media only screen and (max-width: 599px){
+@media only screen and (max-width: 320px) {
+	.box-container__element{
+		width: 250px;
+		height: 250px;
+		margin: 20px;
+		left: calc(50% - 145px);
+	}
+	.info__text{ font-size: 25px; }
+	.mdl-layout__header-row{ padding-left: 15px; }
+}
 
+@media only screen and (min-width: 321px) and (max-width: 599px) {
+	.box-container__element{
+		width: 250px;
+		height: 250px;
+		margin: 20px;
+		left: calc(50% - 145px);
+	}
+	.info__text{ font-size: 35px; }
 }
 
 // TABLETS
 @media only screen and (min-width: 600px) and (max-width: 767px) {
-	.box-container{
-
-	}
 	.box-container__element{
 		width: 230px;
 		height: 230px;
 		margin: 20px;
+		left: calc(50% - 270px);
 	}
 	.info__text{ font-size: 40px; }
 }
