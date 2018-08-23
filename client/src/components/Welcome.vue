@@ -14,7 +14,7 @@
 		</header>
 		<div class="info">
 			<div class="info__text">
-				<h1>With us you can</h1>
+				With us you can
 			</div>
 			<div class="box-container">
 
@@ -73,8 +73,9 @@ $blue: rgb(68,138,255);
 	height: 700px;
 }
 .info__text{
-	padding-top: 100px;
+	padding: 100px 0 50px 0;
 	text-align: center;
+	font-size: 55px;
 }
 .overlay{
 	position: absolute;
@@ -101,23 +102,66 @@ $blue: rgb(68,138,255);
 	padding-top: 30px;
  	margin: 0 auto;
  	display: table;
+}
+.box-container__element{
+	position: relative;
+	width: 300px;
+	height: 300px;
+	text-align: center;
+	margin: 20px;
+	float: left;
+	cursor: pointer;
+	box-shadow: 0px 0px 50px #000;
 
-	.box-container__element{
-		position: relative;
-		width: 300px;
-		height: 300px;
-		text-align: center;
-		margin: 20px;
-		float: left;
-		cursor: pointer;
-		box-shadow: 0px 0px 50px #000;
-
-		&:hover{
-			.overlay{ opacity: .8; }
-		}
+	&:hover{
+		.overlay{ opacity: .8; }
 	}
 }
-.study{background: url('../assets/images/study.jpg') no-repeat;background-size: cover;}
+.study{background: url('../assets/images/study.jpg') no-repeat; background-size: cover;}
 .help{background: url('../assets/images/help.jpg') no-repeat; background-size: cover; background-position: -100px;}
 
+// SCROLLBAR
+::-webkit-scrollbar{
+	width: 10px;
+
+	&-thumb{ background: $yellow; }
+	&-track{ background: #151515; }
+}
+
+
+
+// SMARTPHONES
+@media only screen and (max-width: 599px){
+
+}
+
+// TABLETS
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+	.box-container{
+
+	}
+	.box-container__element{
+		width: 230px;
+		height: 230px;
+		margin: 20px;
+	}
+	.info__text{ font-size: 40px; }
+}
+
+// PC
+@media only screen and (min-width: 768px) and (max-width: 999px) {
+	.box-container__element{
+		width: 170px;
+		height: 170px;
+		margin: 10px;
+	}
+	.help{ background-position: -80px; }
+}
+
+@media only screen and (min-width: 1000px) and (max-width: 1400px) {
+	.box-container__element{
+		width: 200px;
+		height: 200px;
+	}
+}
 </style>
