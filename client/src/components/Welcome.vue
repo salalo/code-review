@@ -116,9 +116,10 @@ $blue: rgb(68,138,255);
 		.overlay{ opacity: .8; }
 	}
 }
+.mdl-layout__header{ position: sticky; top: 0px; }
 .mdl-layout__header-row{ padding-left: 40px; }
-.study{background: url('../assets/images/study.jpg') no-repeat; background-size: cover;}
-.help{background: url('../assets/images/help.jpg') no-repeat; background-size: cover; background-position: -100px;}
+.study{ background: url('../assets/images/study.jpg') no-repeat; background-size: cover; }
+.help{ background: url('../assets/images/help.jpg') no-repeat; background-size: cover; background-position: -100px; }
 
 // SCROLLBAR
 ::-webkit-scrollbar{
