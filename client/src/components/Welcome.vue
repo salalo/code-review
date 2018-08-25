@@ -35,7 +35,7 @@
 					</button>
 
 					<div class="register-link">
-						Not registered? <a href="">Create an account</a>
+						Not registered? <a href="" v-on:click.prevent="registerPopUp()">Create an account</a>
 					</div>
 				</div>
 			</div>
@@ -76,7 +76,7 @@
 					</button>
 
 					<div class="login-link">
-						Already registered? <a href="">Login to your account!</a>
+						Already registered? <a href="" v-on:click.prevent="loginPopUp()">Login to your account!</a>
 					</div>
 				</div>
 			</div>
@@ -220,6 +220,7 @@ $blue: rgb(68,138,255);
 
 // LOGIN AND REGISTER FORMS
 .register-container, .login-container{
+	overflow-y: scroll;
 	display: none;
 	z-index: 1;
 	position: fixed;
@@ -234,7 +235,7 @@ $blue: rgb(68,138,255);
 	margin: 0 auto;
 	position: relative;
 	top: 20%;
-	padding: 30px 30px 30px 30px;
+	padding: 30px;
 	box-shadow: 0px 0px 50px #000;
 
 	button{ width: 100%; }
@@ -263,6 +264,11 @@ $blue: rgb(68,138,255);
 
 
 // SMARTPHONES
+
+@media screen and (orientation:landscape) and (max-width: 599px) {
+	.register-container__form, .login-container__form{ top: 20px; }
+}
+
 @media only screen and (max-width: 320px) {
 	.box-container__element{
 		width: 250px;
@@ -270,9 +276,13 @@ $blue: rgb(68,138,255);
 		margin: 20px;
 		left: calc(50% - 145px);
 	}
+	.register-container__form, .login-container__form{
+		width: 250px;
+		padding: 20px;
+	}
+	.register-container__form{ top: 5px; }
 	.info__text{ font-size: 25px; }
 	.mdl-layout__header-row{ padding-left: 15px; }
-	.login__form { width: 240px}
 }
 
 @media only screen and (min-width: 321px) and (max-width: 599px) {
