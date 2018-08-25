@@ -129,6 +129,9 @@ export default {
 		loginPopUp: function() {
 
 			let loginForm = document.getElementById('loginForm');
+			let registerForm = document.getElementById('registerForm');
+			// closes another form if open
+			registerForm.style.display = "none";
 			loginForm.style.display = "block";
 
 			window.onclick = function(e){
@@ -137,7 +140,9 @@ export default {
 			}
 		},
 		registerPopUp: function() {
+			let loginForm = document.getElementById('loginForm');
 			let registerForm = document.getElementById('registerForm');
+			loginForm.style.display = "none";
 			registerForm.style.display = "block";
 
 			window.onclick = function(e){
