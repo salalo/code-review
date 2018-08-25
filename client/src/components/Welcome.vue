@@ -7,13 +7,13 @@
 				<!-- Add spacer, to align navigation to the right -->
 				<div class="mdl-layout-spacer"></div>
 				<nav class="mdl-navigation">
-					<a class="mdl-navigation__link" href="" v-on:click.prevent="popUp()">Log In</a>
-					<a class="mdl-navigation__link" href="">Sign In</a>
+					<a class="mdl-navigation__link" href="" v-on:click.prevent="loginPopUp()">Log In</a>
+					<a class="mdl-navigation__link" href="" v-on:click.prevent="registerPopUp()">Sign In</a>
 				</nav>
 			</div>
 		</header>
 		<div class="info">
-			<!-- LOGIN POP UP FORM -->
+			<!-- LOGIN POPUP FORM -->
 			<div id="loginForm" class="login-container">
 				<div class="login-container__form">
 					<form action="#">
@@ -36,6 +36,47 @@
 
 					<div class="register-link">
 						Not registered? <a href="">Create an account</a>
+					</div>
+				</div>
+			</div>
+
+			<!-- REGISTER POPUP FORM -->
+			<div id="registerForm" class="register-container">
+				<div class="register-container__form">
+					<form action="#">
+					  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+					    <input class="mdl-textfield__input" type="text">
+					    <label class="mdl-textfield__label">Email</label>
+					  </div>
+					</form>
+
+					<form action="#">
+					  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+					    <input class="mdl-textfield__input" type="text">
+					    <label class="mdl-textfield__label">Nick or name</label>
+					  </div>
+					</form>
+
+					<form action="#">
+					  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+					    <input class="mdl-textfield__input" type="password">
+					    <label class="mdl-textfield__label">Password</label>
+					  </div>
+					</form>
+
+					<form action="#">
+					  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+					    <input class="mdl-textfield__input" type="password">
+					    <label class="mdl-textfield__label">Repeat password</label>
+					  </div>
+					</form>
+
+					<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">
+						REGISTER
+					</button>
+
+					<div class="login-link">
+						Already registered? <a href="">Login to your account!</a>
 					</div>
 				</div>
 			</div>
@@ -85,7 +126,7 @@
 <script>
 export default {
 	methods: {
-		popUp: function() {
+		loginPopUp: function() {
 
 			let loginForm = document.getElementById('loginForm');
 			loginForm.style.display = "block";
@@ -93,6 +134,15 @@ export default {
 			window.onclick = function(e){
 				if(e.target == loginForm)
 					loginForm.style.display = "none";
+			}
+		},
+		registerPopUp: function() {
+			let registerForm = document.getElementById('registerForm');
+			registerForm.style.display = "block";
+
+			window.onclick = function(e){
+				if(e.target == registerForm)
+					registerForm.style.display = "none";
 			}
 		}
 	}
@@ -162,8 +212,9 @@ $blue: rgb(68,138,255);
 .study{ background: url('../assets/images/study.jpg') no-repeat; background-size: cover; }
 .help{ background: url('../assets/images/help.jpg') no-repeat; background-size: cover; background-position: -100px; }
 
-// LOGIN FORM
-.login-container{
+
+// LOGIN AND REGISTER FORMS
+.register-container, .login-container{
 	display: none;
 	z-index: 1;
 	position: fixed;
@@ -172,20 +223,19 @@ $blue: rgb(68,138,255);
 	background-color: rgba(0,0,0,0.7);
 	color: black;
 }
-.login-container__form{
+.register-container__form, .login-container__form{
 	background-color: $white;
 	width: 300px;
-	height: 300px;
 	margin: 0 auto;
 	position: relative;
 	top: 20%;
-	padding: 30px 30px 0px 30px;
+	padding: 30px 30px 30px 30px;
 	box-shadow: 0px 0px 50px #000;
 
 	button{ width: 100%; }
 	form { margin-bottom: 10px; }
 }
-.register-link{
+.login-link, .register-link{
 	color: $lightGrey;
 	margin-top: 20px;
 	text-align: center;
