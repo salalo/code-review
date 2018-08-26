@@ -13,13 +13,15 @@ export default {
 <style lang="scss">
 
 $white: #fafafa;
-$main: rgb(255,152,0);
+$yellow: rgb(255,152,0);
+$lightGrey: rgb(99, 98, 98);
 $grey: rgb(66,66,66);
+$darkGrey: #202124;
 $blue: rgb(68,138,255);
 
 body{
 	font-family: 'Roboto', sans-serif;
-	background-color: $white;
+	background-color: $darkGrey;
 	padding: 0 !important;
 	margin: 0 !important;
 }

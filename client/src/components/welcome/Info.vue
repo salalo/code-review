@@ -1,11 +1,17 @@
 <template>
 	<div class="info">
-		<div class="info__text">
-			With us you can
+		<div class="info__text--left">
+			Code Review is a platform<br>
+			for those who want to learn<br>
+			and improve by interaction<br>
+			with other developers 
+			<i class="material-icons md-dark md-36">
+				trending_up
+			</i>
 		</div>
 		<div class="box-container">
 
-			<div class="box-container__element study">
+			<div class="study box-container__element">
 				<div class="overlay">
 					<div class="overlay__text">
 						Gain knowledge by getting your code reviewed.
@@ -13,7 +19,7 @@
 				</div>
 			</div>
 
-			<div class="box-container__element help">
+			<div class="help box-container__element">
 				<div class="overlay">
 					<div class="overlay__text">
 						Help someone improve by reviewing his work.
@@ -21,15 +27,7 @@
 				</div>
 			</div>
 
-			<div class="box-container__element">
-				<div class="overlay">
-					<div class="overlay__text">
-						Placeholder
-					</div>
-				</div>
-			</div>
-
-			<div class="box-container__element">
+			<div class="bottom box-container__element">
 				<div class="overlay">
 					<div class="overlay__text">
 						Placeholder
@@ -52,16 +50,22 @@ $lightGrey: rgb(99, 98, 98);
 $grey: rgb(66,66,66);
 $darkGrey: #202124;
 $blue: rgb(68,138,255);
-
+body{
+	background-color: $darkGrey;
+}
 .info{
 	background-color: $darkGrey;
 	color: $white;
-	padding-bottom: 150px;
+	padding: 64px 0 100px 0;
+	display: inline-block;
+	width: 100%;
 }
-.info__text{
-	padding: 200px 0 100px 0;
-	text-align: center;
-	font-size: 55px;
+.info__text--left{
+	padding: 250px 0 0 50px;
+	float: left;
+	font-size: 40px;
+	line-height: 1.3em;
+	font-weight: 300;
 }
 .overlay{
 	position: absolute;
@@ -84,73 +88,88 @@ $blue: rgb(68,138,255);
     vertical-align: middle;
 }
 .box-container{
-	padding-top: 30px;
- 	margin: 0 auto;
- 	display: table;
+ 	float: right;
+ 	margin-top: 150px;
 }
 .box-container__element{
 	position: relative;
-	width: 300px;
-	height: 300px;
+	height: 250px;
 	text-align: center;
-	margin: 20px;
 	float: left;
 	cursor: pointer;
-	box-shadow: 0px 0px 50px #000;
+	background-color: $white;
 
 	&:hover{
 		.overlay{ opacity: .8; }
 	}
 }
-.study{ background: url('../../assets/images/study.jpg') no-repeat; background-size: cover; }
-.help{ background: url('../../assets/images/help.jpg') no-repeat; background-size: cover; background-position: -100px; }
+.study{
+	width: 300px;
+	border-right: 1px solid $darkGrey;
+}
+.help{
+	width: 400px;
+}
+.bottom{
+	clear: both;
+	width: 700px;
+	border-top: 1px solid $darkGrey;
+}
 
 
 // SMARTPHONES
-@media only screen and (max-width: 320px) {
-	.box-container__element{
-		width: 250px;
-		height: 250px;
-		margin: 20px;
-		left: calc(50% - 145px);
+@media only screen and (max-width: 599px) {
+	// border won't be needed with different bg
+	.study{ width: 50%; border: none; }
+	.help{ width: 50%; }
+	.bottom { width: 100%; }
+	.box-container{ margin-top: 50px; width: 100%; }
+	.box-container__element{ height: 150px; }
+	.material-icons{ display: none; }
+	.info__text--left{
+		font-size: 25px;
+		width: 100%;
+		text-align: center;
+		padding: 60px 0 0 0;
 	}
-	.info__text{ font-size: 25px; }
 }
-@media only screen and (min-width: 321px) and (max-width: 599px) {
-	.box-container__element{
-		width: 250px;
-		height: 250px;
-		margin: 20px;
-		left: calc(50% - 145px);
+//TABLETS
+@media only screen and (min-width: 600px) and (max-width: 999px) {
+	.study{ width: 200px; }
+	.help{ width: 300px; }
+	.bottom { width: 500px; }
+	.box-container{ margin-top: 90px; }
+	.box-container__element{ height: 200px; }
+	.info__text--left{
+		font-size: 35px;
+		width: 100%;
+		text-align: center;
+		padding: 60px 0 0 0;
 	}
-	.info__text{ font-size: 35px; }
 }
-
-// TABLETS
-@media only screen and (min-width: 600px) and (max-width: 767px) {
-	.box-container__element{
-		width: 230px;
-		height: 230px;
-		margin: 20px;
-		left: calc(50% - 270px);
-	}
-	.info__text{ font-size: 40px; }
-}
-
-// PC
-@media only screen and (min-width: 768px) and (max-width: 999px) {
-	.box-container__element{
-		width: 170px;
-		height: 170px;
-		margin: 10px;
-	}
-	.help{ background-position: -80px; }
-}
-
+//PC
 @media only screen and (min-width: 1000px) and (max-width: 1400px) {
-	.box-container__element{
-		width: 200px;
-		height: 200px;
-	}
+	.info{ padding-bottom: 150px; }
+	.study{ width: 200px; }
+	.help{ width: 300px; }
+	.bottom { width: 500px; }
+	.box-container__element{ height: 200px; }
+	.info__text--left{ font-size: 35px; }
+
 }
+
+// ICONS
+/* Rules for sizing the icon. */
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
 </style>
