@@ -59,7 +59,7 @@ $blue: rgb(68,138,255);
 	padding-bottom: 150px;
 }
 .info__text{
-	padding: 100px 0 50px 0;
+	padding: 200px 0 100px 0;
 	text-align: center;
 	font-size: 55px;
 }
