@@ -1,11 +1,62 @@
 <template>
 	<div class="reviews">
 		<div class="reviews__container">
+			<div class="reviews__container--options">
+				<div class="options-container">
+					s
+				</div>
+			</div>
 			<div class="reviews__container--text">
 				Hottest reviews
 				<a href="#">
 					View more reviews
 				</a>
+			</div>
+			<div class="reviews__container--threads">
+
+				<div class="thread">
+					<div class="thread__stats thread-element">
+						<div class="thread__stats--reviews stats-element">
+							<div class="reviews--value">
+								10
+							</div>
+							Reviews
+						</div>
+
+						<div class="thread__stats--stars stats-element">
+							<div class="stars--vlaue">
+								2
+							</div>
+							Stars
+						</div>
+					</div>
+
+					<a class="thread__title thread-element" href="">
+						Title that user created
+					</a>
+
+					<div class="thread__tags thread-element">
+						<a class="tag" href="">
+							android
+						</a>
+						<a class="tag" href="">
+							java
+						</a>
+					</div>	
+
+					<div class="thread__created thread-element">
+						<span>
+							Created in 
+							<span class="thread__created--date">DD/MM/YYYY</span>
+							 by 
+							 <a href="" class="thread__created--user">user_nick</a>
+						</span>
+					</div>
+				</div>
+
+				<div class="thread">
+					2
+				</div>
 			</div>
 		</div>
 	</div>
@@ -23,7 +74,81 @@ $grey: rgb(66,66,66);
 $darkGrey: #202124;
 $blue: rgb(68,138,255);
 
+// THREAD
+.reviews__container--options{
+	width: 19%;
+	margin-top: -100px;
+	height: 2000px;
+	float: left;
+	border-right: 1px solid $yellow;
+	// background-color: red;
+	position: relative;
+}
+.options-container{
+	float: right;
+	background-color: red;
+	width: 100%;
+	// position: fixed;
+}
+.reviews__container--threads{
+	margin-top: 50px;
+	width: 80%;
+	float: right;
+}
+.thread{
+	width: 100%;
+	color: $white;
+	border-top: 1px solid $lightGrey;
+	padding: 10px 0 10px 0;
+	height: 60px;
+}
+.thread-element{
+	float: left;
+}
+.stats-element{
+	float: left;
+	text-align: center;
+	border: 1px solid $yellow;
+	padding: 10px;
+	width: 50px;
+	margin-right: 20px;
+}
+.thread__title{
+	font-size: 30px;
+	font-weight: 400;
+	padding-left: 2em;
+	vertical-align: middle;
+	height: 100%;
+	line-height: 200%;
+	text-decoration: none;
+	color: $white;
+}
+.thread__created{
+	clear: both;
+	float: right;
+	font-weight: 300;
+	margin-top: -15px;
+}
+.thread__created--user{
+	text-decoration: none;
+	color: $yellow;
+}
+.thread__tags{
+	float: right;
+}
+.tag{
+	float: left;
+	margin-left: 10px;
+	border-radius: 5px;
+	background-color: $blue;
+	font-weight: 300;
+	padding: 1px 5px 1px 5px;
+	color: $white;
+	text-decoration: none;
+}
 
+
+// TITLE
 .reviews{
 	background-color: $grey;
 }
@@ -38,7 +163,8 @@ $blue: rgb(68,138,255);
 	color: $white;
 	font-weight: 400;
 	border-bottom: 1px solid $yellow;
-	padding-bottom: 15px;
+	width: 80%;
+	float: right;
 
 	a{
 		text-decoration: none;

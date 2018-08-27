@@ -156,7 +156,7 @@ $blue: rgb(68,138,255);
 		font-weight: normal;
 	}
 }
-.mdl-layout__header{ position: sticky; top: 0px; }
+.mdl-layout__header{ position: fixed; top: 0px; }
 .mdl-layout__header-row{ padding-left: 40px; }
 
 // SMARTPHONES
