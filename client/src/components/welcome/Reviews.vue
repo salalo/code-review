@@ -3,33 +3,42 @@
 		<div class="reviews__container">
 			<div class="reviews__container--options">
 				<div class="options-container">
-					s
+					options
 				</div>
 			</div>
+
 			<div class="reviews__container--text">
 				Hottest reviews
 				<a href="#">
 					View more reviews
 				</a>
 			</div>
+
 			<div class="reviews__container--threads">
 
 				<div class="thread">
-					<div class="thread__stats thread-element">
+					<a class="thread__stats thread-element" href="">
 						<div class="thread__stats--reviews stats-element">
 							<div class="reviews--value">
 								10
 							</div>
-							Reviews
+							reviews
 						</div>
 
 						<div class="thread__stats--stars stats-element">
 							<div class="stars--vlaue">
 								2
 							</div>
-							Stars
+							stars
 						</div>
-					</div>
+
+						<div class="thread__stats--views stats-element">
+							<div class="views--vlaue">
+								100
+							</div>
+							views
+						</div>
+					</a>
 
 					<a class="thread__title thread-element" href="">
 						Title that user created
@@ -55,7 +64,97 @@
 				</div>
 
 				<div class="thread">
-					2
+					<a class="thread__stats thread-element" href="">
+						<div class="thread__stats--reviews stats-element">
+							<div class="reviews--value">
+								10
+							</div>
+							reviews
+						</div>
+
+						<div class="thread__stats--stars stats-element">
+							<div class="stars--vlaue">
+								2
+							</div>
+							stars
+						</div>
+
+						<div class="thread__stats--views stats-element">
+							<div class="views--vlaue">
+								100
+							</div>
+							views
+						</div>
+					</a>
+
+					<a class="thread__title thread-element" href="">
+						Title that user created
+					</a>
+
+					<div class="thread__tags thread-element">
+						<a class="tag" href="">
+							android
+						</a>
+						<a class="tag" href="">
+							java
+						</a>
+					</div>	
+
+					<div class="thread__created thread-element">
+						<span>
+							Created in 
+							<span class="thread__created--date">DD/MM/YYYY</span>
+							 by 
+							 <a href="" class="thread__created--user">user_nick</a>
+						</span>
+					</div>
+				</div>
+
+				<div class="thread">
+					<a class="thread__stats thread-element" href="">
+						<div class="thread__stats--reviews stats-element">
+							<div class="reviews--value">
+								10
+							</div>
+							reviews
+						</div>
+
+						<div class="thread__stats--stars stats-element">
+							<div class="stars--vlaue">
+								2
+							</div>
+							stars
+						</div>
+
+						<div class="thread__stats--views stats-element">
+							<div class="views--vlaue">
+								100
+							</div>
+							views
+						</div>
+					</a>
+
+					<a class="thread__title thread-element" href="">
+						Title that user created
+					</a>
+
+					<div class="thread__tags thread-element">
+						<a class="tag" href="">
+							android
+						</a>
+						<a class="tag" href="">
+							java
+						</a>
+					</div>	
+
+					<div class="thread__created thread-element">
+						<span>
+							Created in 
+							<span class="thread__created--date">DD/MM/YYYY</span>
+							 by 
+							 <a href="" class="thread__created--user">user_nick</a>
+						</span>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -68,42 +167,48 @@
 <style scoped lang="scss">
 
 $white: #fafafa;
-$yellow: rgb(255,152,0);
 $lightGrey: rgb(99, 98, 98);
 $grey: rgb(66,66,66);
 $darkGrey: #202124;
 $blue: rgb(68,138,255);
+$yellow: rgb(255,152,0);
 
-// THREAD
+
+// MAIN
+a{
+	text-decoration: none;
+	color: $white;
+}
+
+
+// LEFT PANEL
 .reviews__container--options{
 	width: 19%;
 	margin-top: -100px;
 	height: 2000px;
 	float: left;
 	border-right: 1px solid $yellow;
-	// background-color: red;
-	position: relative;
 }
 .options-container{
 	float: right;
 	background-color: red;
 	width: 100%;
-	// position: fixed;
 }
+
+
+// THREAD
 .reviews__container--threads{
 	margin-top: 50px;
 	width: 80%;
 	float: right;
 }
+.thread-element{ float: left; }
 .thread{
 	width: 100%;
 	color: $white;
 	border-top: 1px solid $lightGrey;
 	padding: 10px 0 10px 0;
 	height: 60px;
-}
-.thread-element{
-	float: left;
 }
 .stats-element{
 	float: left;
@@ -112,6 +217,7 @@ $blue: rgb(68,138,255);
 	padding: 10px;
 	width: 50px;
 	margin-right: 20px;
+	font-weight: 300;
 }
 .thread__title{
 	font-size: 30px;
@@ -120,8 +226,6 @@ $blue: rgb(68,138,255);
 	vertical-align: middle;
 	height: 100%;
 	line-height: 200%;
-	text-decoration: none;
-	color: $white;
 }
 .thread__created{
 	clear: both;
@@ -129,22 +233,15 @@ $blue: rgb(68,138,255);
 	font-weight: 300;
 	margin-top: -15px;
 }
-.thread__created--user{
-	text-decoration: none;
-	color: $yellow;
-}
-.thread__tags{
-	float: right;
-}
+.thread__created--user{ color: $yellow; }
+.thread__tags{ float: right; }
 .tag{
 	float: left;
 	margin-left: 10px;
-	border-radius: 5px;
+	border-radius: 4px;
 	background-color: $blue;
 	font-weight: 300;
 	padding: 1px 5px 1px 5px;
-	color: $white;
-	text-decoration: none;
 }
 
 
@@ -167,13 +264,11 @@ $blue: rgb(68,138,255);
 	float: right;
 
 	a{
-		text-decoration: none;
 		font-size: 16px;
 		font-weight: 300;
 		float: right;
 		padding-right: 10px;
 		margin-top: 15px;
-		color: $white;
 	}
 }
 
