@@ -181,7 +181,7 @@ a{
 }
 
 
-// LEFT PANEL
+// LEFT OPTION PANEL
 .reviews__container--options{
 	width: 19%;
 	margin-top: -100px;
