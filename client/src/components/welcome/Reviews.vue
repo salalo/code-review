@@ -135,7 +135,7 @@
 					</a>
 
 					<a class="thread__title thread-element" href="">
-						Title that user created
+						Title that user createdqqqq
 					</a>
 
 					<div class="thread__tags thread-element">
@@ -162,6 +162,16 @@
 </template>
 
 <script>
+	export default {
+		// beforeMount(){
+			// let titleString = document.getElementsByClassName("thread__title").value;
+
+			// if titles length is greater than x cut string and add ... <= in backend
+			// if (titleString.length > 24 ){
+				// document.getElementsByClassName("thread__title").innerHTML = "ok";
+			// }
+		// }
+	}
 </script>
 
 <style scoped lang="scss">
@@ -272,6 +282,13 @@ a{
 	}
 }
 
+//PC
+@media only screen and (min-width: 1000px) and (max-width: 1400px) {
+	.thread__title{
+		font-size: 25px;
+		padding-left: 1.5em;
+	}
+}
 
 // ICONS
 /* Rules for sizing the icon. */
