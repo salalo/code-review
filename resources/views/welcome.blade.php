@@ -30,5 +30,10 @@
              <welcome></welcome>
         </div>
         <script type="text/javascript" src="js/app.js"></script>
+
+        @if(config('app.env') == 'local')
+            <script src="http://localhost:35729/livereload.js"></script>
+        @endif
+
     </body>
 </html>
