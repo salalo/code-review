@@ -84,7 +84,7 @@ body{
 	text-align: center;
 	font-size: 20px;
 	display: table-cell;
-    vertical-align: middle;
+	vertical-align: middle;
 }
 .box-container{
  	float: right;
