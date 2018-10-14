@@ -2,22 +2,22 @@
 		<form id="registerForm" class="register-container" action="" method="post">
 			<div class="register-container__form">
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-          <input class="mdl-textfield__input" name="email" type="text">
+          <input class="mdl-textfield__input" name="email" type="text" required>
           <label class="mdl-textfield__label">Email</label>
         </div>
 
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-          <input class="mdl-textfield__input" name="nick" type="text">
+          <input class="mdl-textfield__input" name="nick" type="text" required>
           <label class="mdl-textfield__label">Nick or name</label>
         </div>
 
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-          <input class="mdl-textfield__input" name="password" type="password">
+          <input class="mdl-textfield__input" name="password" type="password" required>
           <label class="mdl-textfield__label">Password</label>
         </div>
 
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-          <input class="mdl-textfield__input" type="password">
+          <input class="mdl-textfield__input" type="password" required>
           <label class="mdl-textfield__label">Repeat password</label>
         </div>
 
