@@ -2,12 +2,12 @@
 		<form id="loginForm" class="login-container" action="" method="post">
 			<div class="login-container__form">
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-          <input class="mdl-textfield__input" name="email" type="text" required>
+          <input class="mdl-textfield__input" name="email" type="text">
           <label class="mdl-textfield__label">Email</label>
         </div>
 
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-        	<input class="mdl-textfield__input" name="password" type="password" required>
+        	<input class="mdl-textfield__input" name="password" type="password">
         	<label class="mdl-textfield__label">Password</label>
         </div>
 

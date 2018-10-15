@@ -70,4 +70,19 @@ class RegisterController extends Controller
             'activation_key' => $data['activation_key'],
         ]);
     }
+
+    public function register(Request $request)
+    {
+        $this -> validator($request -> all()) -> validate();
+
+        //activation key
+
+        $user = $this -> create($request -> all());
+
+        //to delete after activation key implementation
+        $this -> guard() -> login($user);
+
+        return $this -> register($request, $user);
+    }
+
 }
