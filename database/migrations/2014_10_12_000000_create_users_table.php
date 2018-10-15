@@ -18,11 +18,11 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('password');
             $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('activation_key')->nullable();
-            $table->enum('status', ['active', 'inactive'])->default('inactive');
-            $table->rememberToken();
-            $table->timestamps();
+            // $table->timestamp('email_verified_at')->nullable();
+            // $table->string('activation_key')->nullable();
+            // $table->enum('status', ['active', 'inactive'])->default('inactive');
+            // $table->rememberToken();
+            // $table->timestamps();
         });
     }
 

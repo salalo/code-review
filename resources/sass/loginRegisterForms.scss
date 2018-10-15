@@ -5,9 +5,9 @@ $grey: rgb(66,66,66);
 $darkGrey: #202124;
 $blue: rgb(68,138,255);
 
-.register-container, .login-container{
+.register-container{
 	overflow-y: scroll;
-	display: none;
+	display: block;
 	z-index: 1;
 	position: fixed;
 	width: 100%;
@@ -15,6 +15,7 @@ $blue: rgb(68,138,255);
 	background-color: rgba(0,0,0,0.7);
 	color: black;
 }
+.login-container{display: none;}
 .register-container__form, .login-container__form{
 	background-color: $white;
 	width: 300px;

@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers\Auth;
 
+use DB;
 use App\User;
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -67,22 +69,7 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
-            'activation_key' => $data['activation_key'],
+            // 'activation_key' => $data['activation_key'],
         ]);
     }
-
-    public function register(Request $request)
-    {
-        $this -> validator($request -> all()) -> validate();
-
-        //activation key
-
-        $user = $this -> create($request -> all());
-
-        //to delete after activation key implementation
-        $this -> guard() -> login($user);
-
-        return $this -> register($request, $user);
-    }
-
 }
