@@ -1,5 +1,6 @@
 <template>
 		<form id="registerForm" class="register-container" action="registerUser" method="post">
+      <input type="hidden" name="_token" value="{{ csrf_token() }}">
 			<div class="register-container__form">
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
           <input class="mdl-textfield__input" name="email" type="text">
@@ -32,7 +33,6 @@
 				</div>
         <div class="error"></div>
 			</div>
-      <input type="hidden" name="_token" value="{{ csrf_token() }}">
 		</form>
 </template>
 
