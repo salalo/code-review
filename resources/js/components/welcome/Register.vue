@@ -1,19 +1,18 @@
 <template>
-		<form id="registerForm" class="register-container" action="registerUser" method="post">
-      <input type="hidden" name="_token" value="{{ csrf_token() }}">
+		<form id="registerForm" class="register-container" action="" method="post" @submit.prevent="registerUser()">
 			<div class="register-container__form">
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-          <input class="mdl-textfield__input" name="email" type="text">
+          <input class="mdl-textfield__input" name="email" type="text" v-model="email">
           <label class="mdl-textfield__label">Email</label>
         </div>
 
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-          <input class="mdl-textfield__input" name="nick" type="text">
+          <input class="mdl-textfield__input" name="nick" type="text" v-model="nick">
           <label class="mdl-textfield__label">Nick or name</label>
         </div>
 
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-          <input class="mdl-textfield__input" name="password" type="password">
+          <input class="mdl-textfield__input" name="password" type="password" v-model="password">
           <label class="mdl-textfield__label">Password</label>
         </div>
 
@@ -39,6 +38,22 @@
 <script>
 
 export default {
+  data(){
+    return{
+      email: '',
+      nick: '',
+      password: ''
+    }
+  },
+  methods:{
+    registerUser(){
+      axios.post('users', {
+        email: this.email,
+        nick: this.nick,
+        password: this.password
+      });
+    }
+  }
 }
 </script>
 

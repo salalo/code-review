@@ -48150,7 +48150,7 @@ exports = module.exports = __webpack_require__(3)(false);
 
 
 // module
-exports.push([module.i, "\n.register-container {\n  overflow-y: scroll;\n  display: block;\n  z-index: 1;\n  position: fixed;\n  width: 100%;\n  height: 100%;\n  background-color: rgba(0, 0, 0, 0.7);\n  color: black;\n}\n.login-container {\n  display: none;\n}\n.register-container__form, .login-container__form {\n  background-color: #fafafa;\n  width: 300px;\n  margin: 0 auto;\n  position: relative;\n  top: 20%;\n  padding: 30px;\n  -webkit-box-shadow: 0px 0px 50px #000;\n          box-shadow: 0px 0px 50px #000;\n}\n.register-container__form button, .login-container__form button {\n    width: 100%;\n}\n.register-container__form form, .login-container__form form {\n    margin-bottom: 10px;\n}\n.login-link, .register-link {\n  color: #636262;\n  margin-top: 20px;\n  text-align: center;\n}\n.login-link a, .register-link a {\n    color: #ff9800;\n    text-decoration: none;\n    font-weight: normal;\n}\n.mdl-layout__header {\n  position: fixed;\n  top: 0px;\n}\n.mdl-layout__header-row {\n  padding-left: 40px;\n}\n@media screen and (orientation: landscape) and (max-width: 599px) {\n.register-container__form, .login-container__form {\n    top: 20px;\n}\n}\n@media only screen and (max-width: 320px) {\n.register-container__form, .login-container__form {\n    width: 250px;\n    padding: 20px;\n}\n.register-container__form {\n    top: 5px;\n}\n.mdl-layout__header-row {\n    padding-left: 15px;\n}\n}\n", ""]);
+exports.push([module.i, "\n.register-container, .login-container {\n  overflow-y: scroll;\n  display: none;\n  z-index: 1;\n  position: fixed;\n  width: 100%;\n  height: 100%;\n  background-color: rgba(0, 0, 0, 0.7);\n  color: black;\n}\n.register-container__form, .login-container__form {\n  background-color: #fafafa;\n  width: 300px;\n  margin: 0 auto;\n  position: relative;\n  top: 20%;\n  padding: 30px;\n  -webkit-box-shadow: 0px 0px 50px #000;\n          box-shadow: 0px 0px 50px #000;\n}\n.register-container__form button, .login-container__form button {\n    width: 100%;\n}\n.register-container__form form, .login-container__form form {\n    margin-bottom: 10px;\n}\n.login-link, .register-link {\n  color: #636262;\n  margin-top: 20px;\n  text-align: center;\n}\n.login-link a, .register-link a {\n    color: #ff9800;\n    text-decoration: none;\n    font-weight: normal;\n}\n.mdl-layout__header {\n  position: fixed;\n  top: 0px;\n}\n.mdl-layout__header-row {\n  padding-left: 40px;\n}\n@media screen and (orientation: landscape) and (max-width: 599px) {\n.register-container__form, .login-container__form {\n    top: 20px;\n}\n}\n@media only screen and (max-width: 320px) {\n.register-container__form, .login-container__form {\n    width: 250px;\n    padding: 20px;\n}\n.register-container__form {\n    top: 5px;\n}\n.mdl-layout__header-row {\n    padding-left: 15px;\n}\n}\n", ""]);
 
 // exports
 
@@ -48187,8 +48187,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({});
 
@@ -48196,7 +48194,98 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports={render:function(){},staticRenderFns:[]}
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "form",
+    {
+      staticClass: "login-container",
+      attrs: { id: "loginForm", action: "", method: "post" }
+    },
+    [
+      _c("div", { staticClass: "login-container__form" }, [
+        _vm._m(0),
+        _vm._v(" "),
+        _vm._m(1),
+        _vm._v(" "),
+        _c(
+          "button",
+          {
+            staticClass:
+              "mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect",
+            attrs: { type: "submit" }
+          },
+          [_vm._v("\n\t\t\t\t\tLOGIN\n\t\t\t\t")]
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "register-link" }, [
+          _vm._v("\n\t\t\t\t\tNot registered? "),
+          _c(
+            "a",
+            {
+              attrs: { href: "" },
+              on: {
+                click: function($event) {
+                  $event.preventDefault()
+                  _vm.registerPopUp()
+                }
+              }
+            },
+            [_vm._v("Create an account")]
+          )
+        ])
+      ])
+    ]
+  )
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass:
+          "mdl-textfield mdl-js-textfield mdl-textfield--floating-label"
+      },
+      [
+        _c("input", {
+          staticClass: "mdl-textfield__input",
+          attrs: { name: "email", type: "text" }
+        }),
+        _vm._v(" "),
+        _c("label", { staticClass: "mdl-textfield__label" }, [_vm._v("Email")])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass:
+          "mdl-textfield mdl-js-textfield mdl-textfield--floating-label"
+      },
+      [
+        _c("input", {
+          staticClass: "mdl-textfield__input",
+          attrs: { name: "password", type: "password" }
+        }),
+        _vm._v(" "),
+        _c("label", { staticClass: "mdl-textfield__label" }, [
+          _vm._v("Password")
+        ])
+      ]
+    )
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
@@ -48290,7 +48379,7 @@ exports = module.exports = __webpack_require__(3)(false);
 
 
 // module
-exports.push([module.i, "\n.register-container {\n  overflow-y: scroll;\n  display: block;\n  z-index: 1;\n  position: fixed;\n  width: 100%;\n  height: 100%;\n  background-color: rgba(0, 0, 0, 0.7);\n  color: black;\n}\n.login-container {\n  display: none;\n}\n.register-container__form, .login-container__form {\n  background-color: #fafafa;\n  width: 300px;\n  margin: 0 auto;\n  position: relative;\n  top: 20%;\n  padding: 30px;\n  -webkit-box-shadow: 0px 0px 50px #000;\n          box-shadow: 0px 0px 50px #000;\n}\n.register-container__form button, .login-container__form button {\n    width: 100%;\n}\n.register-container__form form, .login-container__form form {\n    margin-bottom: 10px;\n}\n.login-link, .register-link {\n  color: #636262;\n  margin-top: 20px;\n  text-align: center;\n}\n.login-link a, .register-link a {\n    color: #ff9800;\n    text-decoration: none;\n    font-weight: normal;\n}\n.mdl-layout__header {\n  position: fixed;\n  top: 0px;\n}\n.mdl-layout__header-row {\n  padding-left: 40px;\n}\n@media screen and (orientation: landscape) and (max-width: 599px) {\n.register-container__form, .login-container__form {\n    top: 20px;\n}\n}\n@media only screen and (max-width: 320px) {\n.register-container__form, .login-container__form {\n    width: 250px;\n    padding: 20px;\n}\n.register-container__form {\n    top: 5px;\n}\n.mdl-layout__header-row {\n    padding-left: 15px;\n}\n}\n.error {\n  display: none;\n  width: 100%;\n  color: #f02626;\n  font-size: 13px;\n  border: 1px solid #f02626;\n  border-radius: 3px;\n  padding: 5px;\n  margin-top: 20px;\n}\n", ""]);
+exports.push([module.i, "\n.register-container, .login-container {\n  overflow-y: scroll;\n  display: none;\n  z-index: 1;\n  position: fixed;\n  width: 100%;\n  height: 100%;\n  background-color: rgba(0, 0, 0, 0.7);\n  color: black;\n}\n.register-container__form, .login-container__form {\n  background-color: #fafafa;\n  width: 300px;\n  margin: 0 auto;\n  position: relative;\n  top: 20%;\n  padding: 30px;\n  -webkit-box-shadow: 0px 0px 50px #000;\n          box-shadow: 0px 0px 50px #000;\n}\n.register-container__form button, .login-container__form button {\n    width: 100%;\n}\n.register-container__form form, .login-container__form form {\n    margin-bottom: 10px;\n}\n.login-link, .register-link {\n  color: #636262;\n  margin-top: 20px;\n  text-align: center;\n}\n.login-link a, .register-link a {\n    color: #ff9800;\n    text-decoration: none;\n    font-weight: normal;\n}\n.mdl-layout__header {\n  position: fixed;\n  top: 0px;\n}\n.mdl-layout__header-row {\n  padding-left: 40px;\n}\n@media screen and (orientation: landscape) and (max-width: 599px) {\n.register-container__form, .login-container__form {\n    top: 20px;\n}\n}\n@media only screen and (max-width: 320px) {\n.register-container__form, .login-container__form {\n    width: 250px;\n    padding: 20px;\n}\n.register-container__form {\n    top: 5px;\n}\n.mdl-layout__header-row {\n    padding-left: 15px;\n}\n}\n.error {\n  display: none;\n  width: 100%;\n  color: #f02626;\n  font-size: 13px;\n  border: 1px solid #f02626;\n  border-radius: 3px;\n  padding: 5px;\n  margin-top: 20px;\n}\n", ""]);
 
 // exports
 
@@ -48338,16 +48427,215 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
 
 
-/* harmony default export */ __webpack_exports__["default"] = ({});
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      email: '',
+      nick: '',
+      password: ''
+    };
+  },
+
+  methods: {
+    registerUser: function registerUser() {
+      axios.post('users', {
+        email: this.email,
+        nick: this.nick,
+        password: this.password
+      });
+    }
+  }
+});
 
 /***/ }),
 /* 63 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports={render:function(){},staticRenderFns:[]}
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "form",
+    {
+      staticClass: "register-container",
+      attrs: { id: "registerForm", action: "", method: "post" },
+      on: {
+        submit: function($event) {
+          $event.preventDefault()
+          _vm.registerUser()
+        }
+      }
+    },
+    [
+      _c("div", { staticClass: "register-container__form" }, [
+        _c(
+          "div",
+          {
+            staticClass:
+              "mdl-textfield mdl-js-textfield mdl-textfield--floating-label"
+          },
+          [
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.email,
+                  expression: "email"
+                }
+              ],
+              staticClass: "mdl-textfield__input",
+              attrs: { name: "email", type: "text" },
+              domProps: { value: _vm.email },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.email = $event.target.value
+                }
+              }
+            }),
+            _vm._v(" "),
+            _c("label", { staticClass: "mdl-textfield__label" }, [
+              _vm._v("Email")
+            ])
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass:
+              "mdl-textfield mdl-js-textfield mdl-textfield--floating-label"
+          },
+          [
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.nick,
+                  expression: "nick"
+                }
+              ],
+              staticClass: "mdl-textfield__input",
+              attrs: { name: "nick", type: "text" },
+              domProps: { value: _vm.nick },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.nick = $event.target.value
+                }
+              }
+            }),
+            _vm._v(" "),
+            _c("label", { staticClass: "mdl-textfield__label" }, [
+              _vm._v("Nick or name")
+            ])
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass:
+              "mdl-textfield mdl-js-textfield mdl-textfield--floating-label"
+          },
+          [
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.password,
+                  expression: "password"
+                }
+              ],
+              staticClass: "mdl-textfield__input",
+              attrs: { name: "password", type: "password" },
+              domProps: { value: _vm.password },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.password = $event.target.value
+                }
+              }
+            }),
+            _vm._v(" "),
+            _c("label", { staticClass: "mdl-textfield__label" }, [
+              _vm._v("Password")
+            ])
+          ]
+        ),
+        _vm._v(" "),
+        _vm._m(0),
+        _vm._v(" "),
+        _c(
+          "button",
+          {
+            staticClass:
+              "mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect",
+            attrs: { type: "submit", name: "submit" }
+          },
+          [_vm._v("\n\t\t\t\t\tREGISTER\n\t\t\t\t")]
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "login-link" }, [
+          _vm._v("\n\t\t\t\t\tAlready registered? "),
+          _c(
+            "a",
+            {
+              attrs: { href: "" },
+              on: {
+                click: function($event) {
+                  $event.preventDefault()
+                  _vm.loginPopUp()
+                }
+              }
+            },
+            [_vm._v("Login to your account!")]
+          )
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "error" })
+      ])
+    ]
+  )
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass:
+          "mdl-textfield mdl-js-textfield mdl-textfield--floating-label"
+      },
+      [
+        _c("input", {
+          staticClass: "mdl-textfield__input",
+          attrs: { type: "password" }
+        }),
+        _vm._v(" "),
+        _c("label", { staticClass: "mdl-textfield__label" }, [
+          _vm._v("Repeat password")
+        ])
+      ]
+    )
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
