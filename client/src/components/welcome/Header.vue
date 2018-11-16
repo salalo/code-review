@@ -22,38 +22,41 @@
 
 <script>
 
-	import Login from './Login.vue'
-	import Register from './Register.vue'
+import Login from './Login.vue'
+import Register from './Register.vue'
 
-	export default {
-		components: {
-			'login-form': Login,
-			'register-form': Register
+export default {
+	components: {
+		'login-form': Login,
+		'register-form': Register
+	},
+
+	methods: {
+
+		loginPopUp: () => {
+			let loginForm = document.getElementById('loginForm');
+			let registerForm = document.getElementById('registerForm');
+			// closes another form if open
+			registerForm.style.display = "none";
+			loginForm.style.display = "block";
+
+			window.onclick = e => {
+				if(e.target == loginForm)
+					loginForm.style.display = "none";
+			}
 		},
-		methods: {
-			loginPopUp: () => {
-				let loginForm = document.getElementById('loginForm');
-				let registerForm = document.getElementById('registerForm');
-				// closes another form if open
-				registerForm.style.display = "none";
-				loginForm.style.display = "block";
 
-				window.onclick = (e) => {
-					if(e.target == loginForm)
-						loginForm.style.display = "none";
-				}
-			},
-			registerPopUp: () => {
-				let loginForm = document.getElementById('loginForm');
-				let registerForm = document.getElementById('registerForm');
-				loginForm.style.display = "none";
-				registerForm.style.display = "block";
+		registerPopUp: () => {
+			let loginForm = document.getElementById('loginForm');
+			let registerForm = document.getElementById('registerForm');
+			loginForm.style.display = "none";
+			registerForm.style.display = "block";
 
-				window.onclick = (e) => {
-					if(e.target == registerForm)
-						registerForm.style.display = "none";
-				}
+			window.onclick = e => {
+				if(e.target == registerForm)
+					registerForm.style.display = "none";
 			}
 		}
 	}
+}
 </script>

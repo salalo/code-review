@@ -175,14 +175,7 @@
 </script>
 
 <style scoped lang="scss">
-
-$white: #fafafa;
-$lightGrey: rgb(99, 98, 98);
-$grey: rgb(66,66,66);
-$darkGrey: #202124;
-$blue: rgb(68,138,255);
-$yellow: rgb(255,152,0);
-
+@import '../../stylesheets/_variables.scss';
 
 // MAIN
 a{

@@ -30,7 +30,7 @@
 			<div class="bottom box-container__element">
 				<div class="overlay">
 					<div class="overlay__text">
-						Placeholder
+						Everyone can become your mentor.
 					</div>
 				</div>
 			</div>
@@ -42,16 +42,8 @@
 </script>
 
 <style scoped lang="scss">
+@import '../../stylesheets/_variables.scss';
 
-$white: #fafafa;
-$yellow: rgb(255,152,0);
-$lightGrey: rgb(99, 98, 98);
-$grey: rgb(66,66,66);
-$darkGrey: #202124;
-$blue: rgb(68,138,255);
-body{
-	background-color: $darkGrey;
-}
 .info{
 	background-color: $darkGrey;
 	color: $white;

@@ -58,7 +58,7 @@ export default {
 </script>
 
 <style lang="scss">
-  @import '../../stylesheets/loginRegisterForms.scss';
+@import '../../stylesheets/loginRegisterForms.scss';
 
 .error{
   display: none;
