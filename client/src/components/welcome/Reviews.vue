@@ -16,7 +16,11 @@
 
 			<div class="reviews__container--threads">
 
-				<div class="thread">
+				<div
+					class="thread"
+					v-for="post in posts"
+					:key="post"
+				>
 					<a class="thread__stats thread-element" href="">
 						<div class="thread__stats--reviews stats-element">
 							<div class="reviews--value">
@@ -41,15 +45,12 @@
 					</a>
 
 					<a class="thread__title thread-element" href="">
-						Title that user created
+						{{ post.title }}
 					</a>
 
 					<div class="thread__tags thread-element">
 						<a class="tag" href="">
-							android
-						</a>
-						<a class="tag" href="">
-							java
+							{{ post.tags }}
 						</a>
 					</div>	
 
@@ -63,115 +64,32 @@
 					</div>
 				</div>
 
-				<div class="thread">
-					<a class="thread__stats thread-element" href="">
-						<div class="thread__stats--reviews stats-element">
-							<div class="reviews--value">
-								10
-							</div>
-							reviews
-						</div>
-
-						<div class="thread__stats--stars stats-element">
-							<div class="stars--vlaue">
-								2
-							</div>
-							stars
-						</div>
-
-						<div class="thread__stats--views stats-element">
-							<div class="views--vlaue">
-								100
-							</div>
-							views
-						</div>
-					</a>
-
-					<a class="thread__title thread-element" href="">
-						Title that user created
-					</a>
-
-					<div class="thread__tags thread-element">
-						<a class="tag" href="">
-							android
-						</a>
-						<a class="tag" href="">
-							java
-						</a>
-					</div>	
-
-					<div class="thread__created thread-element">
-						<span>
-							Created in 
-							<span class="thread__created--date">DD/MM/YYYY</span>
-							 by 
-							 <a href="" class="thread__created--user">user_nick</a>
-						</span>
-					</div>
-				</div>
-
-				<div class="thread">
-					<a class="thread__stats thread-element" href="">
-						<div class="thread__stats--reviews stats-element">
-							<div class="reviews--value">
-								10
-							</div>
-							reviews
-						</div>
-
-						<div class="thread__stats--stars stats-element">
-							<div class="stars--vlaue">
-								2
-							</div>
-							stars
-						</div>
-
-						<div class="thread__stats--views stats-element">
-							<div class="views--vlaue">
-								100
-							</div>
-							views
-						</div>
-					</a>
-
-					<a class="thread__title thread-element" href="">
-						Title that user createdqqqq
-					</a>
-
-					<div class="thread__tags thread-element">
-						<a class="tag" href="">
-							android
-						</a>
-						<a class="tag" href="">
-							java
-						</a>
-					</div>	
-
-					<div class="thread__created thread-element">
-						<span>
-							Created in 
-							<span class="thread__created--date">DD/MM/YYYY</span>
-							 by 
-							 <a href="" class="thread__created--user">user_nick</a>
-						</span>
-					</div>
-				</div>
 			</div>
 		</div>
 	</div>
 </template>
 
 <script>
-	export default {
-		// beforeMount(){
-			// let titleString = document.getElementsByClassName("thread__title").value;
 
-			// if titles length is greater than x cut string and add ... <= in backend
-			// if (titleString.length > 24 ){
-				// document.getElementsByClassName("thread__title").innerHTML = "ok";
-			// }
-		// }
-	}
+import PostsService from '../../services/PostsService'
+export default {
+  data () {
+   	return {
+   		posts: []
+   	}
+ 	},
+
+ 	mounted() {
+ 		this.getPosts()
+ 	},
+
+ 	methods: {
+ 		async getPosts () {
+      const response = await PostsService.fetchPosts()
+      this.posts = response
+    }
+ 	}
+}
 </script>
 
 <style scoped lang="scss">
