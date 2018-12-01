@@ -15,11 +15,10 @@
 			</div>
 
 			<div class="reviews__container--threads">
-
+				<!-- eslint-disable-next-line -->
 				<div
 					class="thread"
 					v-for="post in posts"
-					:key="post"
 				>
 					<a class="thread__stats thread-element" href="">
 						<div class="thread__stats--reviews stats-element">
