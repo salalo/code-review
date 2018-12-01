@@ -1,18 +1,18 @@
 <template>
-		<form id="registerForm" class="register-container" action="" method="post" @submit.prevent="registerUser()">
+		<form id="registerForm" class="register-container" action="/create" method="post">
 			<div class="register-container__form">
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-          <input class="mdl-textfield__input" name="email" type="text" v-model="email">
+          <input class="mdl-textfield__input" name="email" type="text">
           <label class="mdl-textfield__label">Email</label>
         </div>
 
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-          <input class="mdl-textfield__input" name="nick" type="text" v-model="nick">
+          <input class="mdl-textfield__input" name="nick" type="text">
           <label class="mdl-textfield__label">Nick or name</label>
         </div>
 
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-          <input class="mdl-textfield__input" name="password" type="password" v-model="password">
+          <input class="mdl-textfield__input" name="password" type="password">
           <label class="mdl-textfield__label">Password</label>
         </div>
 
@@ -36,25 +36,7 @@
 </template>
 
 <script>
-
-export default {
-  data(){
-    return{
-      email: '',
-      nick: '',
-      password: ''
-    }
-  },
-  methods:{
-    registerUser(){
-      axios.post('users', {
-        email: this.email,
-        nick: this.nick,
-        password: this.password
-      });
-    }
-  }
-}
+export default {}
 </script>
 
 <style lang="scss">

@@ -1,25 +1,27 @@
 const express = require('express')
 const app = express()
-const cors = require('cors')
 const morgan = require('morgan')
-const cookieParser = require('cookie-parser')
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 const passport = require('passport')
 const flash = require('connect-flash')
 const session = require('express-session')
+const UserRouter = require('./UserRouter.js')
+const mongodb = require('./config/database.js')
 
 // connect to database
-mongoose.connect('mongodb://127.0.0.1:27017/test', (err, db) => {
-  if (!err) {
-    console.log('\nConnected successfully!')
-  }
-})
+mongoose.connect(mongodb.DB, { useNewUrlParser: true }).then(
+  () => { console.log('\nConnected successfully!') },
+  err => console.log('\nCan not connect to the database' + err)
+)
+
+// require('./config/passport')(passport);
 
 app.use(morgan('dev'))
-app.use(cookieParser())
 app.use(bodyParser.json())
-app.use(cors())
+app.use(bodyParser.urlencoded({ extended: true }))
+
+app.use(UserRouter);
 
 app.set('view engine', 'ejs')
 
@@ -34,8 +36,7 @@ app.get('/posts', (req, res) => {
     {
       title: 'Title of a new thread',
       tags: 'android'
-    }
-  )
+    })
 })
 
 app.listen(process.env.PORT || 8081)

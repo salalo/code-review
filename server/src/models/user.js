@@ -1,41 +1,42 @@
 const mongoose = require('mongoose')
-const bcrypt = require('bcrypt-nodejs')
+const Schema = mongoose.Schema
 
-// chema for user model
-const userSchema = mongoose.Schema({
-  local: {
-    nick: String,
-    email: String,
-    password: String
+const User = new Schema({
+  name: {
+    type: String
+  },
+  email: {
+    type: String
   }
-  // facebook: {
-  //   id: String,
-  //   token: String,
-  //   name: String,
-  //   email: String
-  // },
-  // twitter: {
-  //   id: String,
-  //   token: String,
-  //   displayName: String,
-  //   username: String
-  // },
-  // google: {
-  //   id: String,
-  //   token: String,
-  //   email: String,
-  //   name: String
-  // }
+},
+{
+  collection: 'users'
 })
 
+module.exports = mongoose.model('User', User)
+// local: {
+//   nick: String,
+//   email: String,
+//   password: String
+// },
+// facebook: {
+//   id: String,
+//   token: String,
+//   name: String,
+//   email: String
+// },
+// google: {
+//   id: String,
+//   token: String,
+//   email: String,
+//   name: String
+// }
 // generating a hash
-userSchema.methods.generateHash = password => {
-  return bcrypt.hashSync(password, bcrypt.genSaltSync(8), null)
-}
+// User.methods.generateHash = password => {
+//   return bcrypt.hashSync(password, bcrypt.genSaltSync(8), null)
+// }
 
-// password vaildation check
-userSchema.methods.validPassword = password => {
-  return bcrypt.compareSync(password, this.local.password)
-}
-
-module.exports = mongoose.model('User', userSchema)
+// // password vaildation check
+// User.methods.validPassword = password => {
+//   return bcrypt.compareSync(password, this.local.password)
+// }
