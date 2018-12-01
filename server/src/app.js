@@ -12,7 +12,7 @@ const mongodb = require('./config/database.js')
 // connect to database
 mongoose.connect(mongodb.DB, { useNewUrlParser: true }).then(
   () => { console.log('\nConnected successfully!') },
-  err => console.log('\nCan not connect to the database' + err)
+  err => console.log('\nCan not connect to the database\n\n' + err)
 )
 
 // require('./config/passport')(passport);

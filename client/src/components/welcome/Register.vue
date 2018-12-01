@@ -1,18 +1,18 @@
 <template>
-		<form id="registerForm" class="register-container" action="/create" method="post">
+		<form id="registerForm" class="register-container" action="/create" method="post" @submit.prevent="sendUser">
 			<div class="register-container__form">
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-          <input class="mdl-textfield__input" name="email" type="text">
+          <input class="mdl-textfield__input" name="email" type="text" v-model="User.email">
           <label class="mdl-textfield__label">Email</label>
         </div>
 
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-          <input class="mdl-textfield__input" name="nick" type="text">
+          <input class="mdl-textfield__input" name="nick" type="text" v-model="User.nick">
           <label class="mdl-textfield__label">Nick or name</label>
         </div>
 
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-          <input class="mdl-textfield__input" name="password" type="password">
+          <input class="mdl-textfield__input" name="password" type="password" v-model="User.password">
           <label class="mdl-textfield__label">Password</label>
         </div>
 
@@ -36,7 +36,33 @@
 </template>
 
 <script>
-export default {}
+import axios from 'axios';
+
+export default {
+  data() {
+    return {
+      User: {
+        nick: '',
+        email: '',
+        password: ''
+      }
+    };
+  },
+
+  methods: {
+    sendUser() {
+      let newUser = {
+        nick: this.User.nick,
+        email: this.User.email,
+        password: this.User.password
+      }
+      
+      axios.post('http://localhost:8081/create', newUser)
+        .then(res => console.log(res))
+        .catch(err => console.log(err))
+    }
+  }
+}
 </script>
 
 <style lang="scss">
