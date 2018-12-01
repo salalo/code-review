@@ -10,9 +10,9 @@ const flash = require('connect-flash')
 const session = require('express-session')
 
 // connect to database
-mongoose.connect('mongodb://127.0.0.1:27017', (err, db) => {
+mongoose.connect('mongodb://127.0.0.1:27017/test', (err, db) => {
   if (!err) {
-    console.log('\n Connected successfully!')
+    console.log('\nConnected successfully!')
   }
 })
 
