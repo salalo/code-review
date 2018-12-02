@@ -21,7 +21,7 @@ app.use(morgan('dev'))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 
-app.use(UserRouter);
+app.use(UserRouter)
 
 app.set('view engine', 'ejs')
 
