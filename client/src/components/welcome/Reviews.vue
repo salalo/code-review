@@ -84,7 +84,7 @@ export default {
 
  	methods: {
  		async getPosts () {
-      const response = await PostsService.fetchPosts()
+      let response = await PostsService.fetchPosts()
       this.posts = response
     }
  	}

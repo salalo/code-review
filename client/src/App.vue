@@ -1,15 +1,21 @@
 <template>
   <div id="app">
-    <welcome/>
+    <router-view/>
   </div>
 </template>
 
-<script>
-import Welcome from '@/components/Welcome';
+<style lang="scss">
 
-export default {
-  components: {
-  	'welcome': Welcome
-  }
+@import './stylesheets/_variables.scss';
+@import './stylesheets/_mixins.scss';
+
+body { @include text-select(none); }
+
+// SCROLLBAR
+::-webkit-scrollbar{
+	width: 10px;
+
+	&-thumb{ background: $yellow; }
+	&-track{ background: #151515; }
 }
-</script>
+</style>

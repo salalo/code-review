@@ -26,6 +26,19 @@
 
 <script>
 export default {
+	methods: {
+		registerPopUp: () => {
+			let loginForm = document.getElementById('loginForm');
+			let registerForm = document.getElementById('registerForm');
+			loginForm.style.display = "none";
+			registerForm.style.display = "block";
+
+			window.onclick = e => {
+				if(e.target == registerForm)
+					registerForm.style.display = "none";
+			}
+		}
+	}
 }
 </script>
 

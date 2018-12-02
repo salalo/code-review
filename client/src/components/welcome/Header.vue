@@ -32,7 +32,6 @@ export default {
 	},
 
 	methods: {
-
 		loginPopUp: () => {
 			let loginForm = document.getElementById('loginForm');
 			let registerForm = document.getElementById('registerForm');

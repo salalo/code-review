@@ -2,11 +2,23 @@ const mongoose = require('mongoose')
 // const bcrypt = require('bcrypt-nodejs')
 
 const User = mongoose.Schema({
-  nick: String,
-  email: String,
-  password: String
+  nick: {
+    type: String,
+    required: true
+  },
+  email: {
+    type: String,
+    required: true
+  },
+  password: {
+    type: String,
+    required: true
+  }
+  // registration date
+  // passport
 })
 
+module.exports = mongoose.model('User', User)
 // // generating a hash
 // User.methods.generateHash = password => {
 //   return bcrypt.hashSync(User.password, bcrypt.genSaltSync(8), null)
@@ -17,7 +29,6 @@ const User = mongoose.Schema({
 //   return bcrypt.compareSync(password, this.localPassword)
 // }
 
-module.exports = mongoose.model('User', User)
 // FOR SOCIAL REGISTERS
 // local: {
 //   nick: String,
