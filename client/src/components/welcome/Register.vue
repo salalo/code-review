@@ -22,7 +22,7 @@
         </div>
 
 				<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect"
-                type="submit" name="submit"
+                type="submit" name="submit" v-on:click="loadingScreen()"
         >
 					REGISTER
 				</button>
